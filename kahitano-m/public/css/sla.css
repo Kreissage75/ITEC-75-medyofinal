@@ -1,0 +1,59 @@
+.sla-dashboard { display: grid; gap: 20px; }
+.sla-kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+.sla-card { background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 18px; padding: 20px; box-shadow: 0 16px 35px rgba(15,23,42,0.05); }
+.sla-card .label { display: block; font-size: 12px; color: #667085; margin-bottom: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.sla-card .value { font-size: 28px; font-weight: 800; color: #111827; }
+.sla-card .subtle { font-size: 13px; color: #7c7c8a; margin-top: 6px; }
+.sla-card .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: rgba(62,169,110,0.12); border-radius: 999px; font-weight: 700; font-size: 12px; color: #236a3d; }
+.sla-card.green { border-color: rgba(62,169,110,0.18); }
+.sla-card.orange { border-color: rgba(244,162,97,0.18); }
+.sla-card.red { border-color: rgba(239,75,71,0.18); }
+.sla-card.dark { border-color: rgba(15,23,42,0.08); }
+.sla-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 20px; }
+.sla-panel { display: grid; gap: 20px; }
+.sla-panel .panel-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.sla-panel .panel-row .sla-card { min-height: 400px; }
+.sla-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.sla-table th, .sla-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid rgba(15,23,42,0.08); }
+.sla-table th { color: #475569; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+.sla-table tbody tr:hover { background: rgba(255,255,255,0.8); }
+.sla-pill { display: inline-flex; align-items: center; justify-content: center; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.sla-pill.high { background: #fee2e2; color: #b91c1c; }
+.sla-pill.medium { background: #ffedd5; color: #c2410c; }
+.sla-pill.low { background: #dcfce7; color: #166534; }
+.sla-pill.general { background: #e2e8f0; color: #334155; }
+.sla-pill.active { background: #e0f2fe; color: #0369a1; }
+.sla-pill.inactive { background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; }
+.sla-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.sla-button { border: none; background: #111827; color: #fff; padding: 12px 18px; border-radius: 14px; font-weight: 700; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease; }
+.sla-button:hover { transform: translateY(-1px); box-shadow: 0 14px 30px rgba(15,23,42,0.12); }
+.sla-button.secondary { background: #f8fafc; color: #111827; border: 1px solid rgba(15,23,42,0.08); }
+.sla-button.export { background: #2563eb; }
+.sla-button.dynamic { min-width: 180px; }
+.sla-chart-card { min-height: 360px; display: flex; flex-direction: column; }
+.sla-chart-header { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.sla-chart-header h3 { margin: 0; font-size: 16px; font-weight: 800; }
+.sla-chart-footer { margin-top: auto; font-size: 12px; color: #667085; }
+.sla-status-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.sla-status-card { background: #f8fafc; border: 1px solid rgba(15,23,42,0.08); border-radius: 16px; padding: 16px; }
+.sla-status-card .number { font-size: 24px; font-weight: 700; color: #111827; }
+.sla-status-card .text { font-size: 12px; color: #64748b; margin-top: 6px; }
+.sla-modal-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,0.42); backdrop-filter: blur(4px); display: none; justify-content: center; align-items: center; padding: 18px; z-index: 30; }
+.sla-modal-backdrop.active { display: flex; }
+.sla-modal { width: min(720px, 100%); background: #ffffff; border-radius: 24px; padding: 28px; box-shadow: 0 40px 120px rgba(15,23,42,0.14); max-height: 90vh; overflow-y: auto; }
+.sla-modal header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.sla-modal header h2 { margin: 0; font-size: 20px; }
+.sla-modal header button { border: none; background: transparent; font-size: 22px; cursor: pointer; color: #475569; }
+.sla-form { display: grid; gap: 18px; }
+.sla-form label { display: grid; gap: 8px; font-size: 14px; color: #1f2937; }
+.sla-form input[type="text"], .sla-form textarea, .sla-form select, .sla-form input[type="date"] { width: 100%; border: 1px solid rgba(15,23,42,0.12); border-radius: 14px; padding: 14px 16px; font-size: 14px; color: #111827; background: #f8fafc; }
+.sla-form textarea { min-height: 100px; resize: vertical; }
+.sla-form .row { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.sla-form .inline { display: flex; gap: 16px; flex-wrap: wrap; }
+.sla-form .inline label { flex: 1; }
+.sla-toast { position: fixed; right: 20px; top: 20px; background: #0f172a; color: #fff; padding: 14px 18px; border-radius: 16px; box-shadow: 0 20px 50px rgba(15,23,42,0.22); z-index: 50; display: none; }
+.sla-toast.active { display: block; }
+.sla-range-button { border: 1px solid #cbd5e1; border-radius: 14px; background: #f8fafc; padding: 10px 16px; font-size: 13px; color: #475569; cursor: pointer; transition: background .15s ease, border-color .15s ease; }
+.sla-range-button.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+@media (max-width: 1100px) { .sla-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sla-grid { grid-template-columns: 1fr; } .sla-panel .panel-row { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .sla-kpis { grid-template-columns: 1fr; } .sla-card { padding: 16px; } .sla-form .row { grid-template-columns: 1fr; } }
