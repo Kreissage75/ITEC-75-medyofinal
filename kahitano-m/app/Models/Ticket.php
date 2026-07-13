@@ -61,4 +61,14 @@ class Ticket extends Model
 
         return $this->created_at->diffInMinutes($this->updated_at);
     }
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class, 'customer_name', 'name');
+    }
+
+    public function slaRule()
+    {
+        return $this->belongsTo(SlaRule::class, 'priority', 'priority');
+    }
 }
