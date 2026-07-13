@@ -47,4 +47,9 @@ class SlaRule extends Model
     {
         return ($this->resolution_hours * 60) + $this->resolution_minutes;
     }
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class, 'priority', 'priority');
+    }
 }
